@@ -15,6 +15,5 @@ export class NewTransferenceComponent {
     console.log('Solicitada nova transferência');
     const valueIssue = { value: this.value, destiny: this.destiny };
     this.toTransfer.emit(valueIssue);
-    console.log(valueIssue);
   }
 }
