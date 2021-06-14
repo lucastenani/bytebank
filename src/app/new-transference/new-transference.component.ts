@@ -13,7 +13,15 @@ export class NewTransferenceComponent {
 
   transfer() {
     console.log('Solicitada nova transferência');
+
     const valueIssue = { value: this.value, destiny: this.destiny };
     this.toTransfer.emit(valueIssue);
+
+    this.clearFields();
+  }
+
+  clearFields() {
+    this.value = 0;
+    this.destiny = 0;
   }
 }

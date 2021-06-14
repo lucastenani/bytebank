@@ -7,8 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bytebank';
+  transference: any;
 
   transfer($event: any) {
     console.log($event);
+    this.transference = $event;
   }
 }
