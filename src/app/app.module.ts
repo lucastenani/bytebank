@@ -4,9 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NewTransferenceComponent } from './new-transference/new-transference.component';
+import { StatementComponent } from './statement/statement.component';
 
 @NgModule({
-  declarations: [AppComponent, NewTransferenceComponent],
+  declarations: [AppComponent, NewTransferenceComponent, StatementComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
