@@ -1,5 +1,15 @@
-<div *ngFor="let transfer of transfers">
-  <p>Data: {{ transfer?.date }}</p>
-  <p>Valor: {{ transfer?.value }}</p>
-  <p>Destino:{{ transfer?.destiny }}</p>
-</div>
+<table>
+  <thead>
+    <th>Data</th>
+    <th>Valor</th>
+    <th>Destino</th>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let transfer of transfers">
+      <td>{{transfer.date | date: 'short'}}</td>
+      <td>{{transfer.value | currency}}</td>
+      <td>{{transfer.destiny}}</td>
+    </tr>
+  </tbody>
+</table>
