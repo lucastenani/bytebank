@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./statement.component.scss'],
 })
 export class StatementComponent implements OnInit {
-  @Input() transference: any;
+  @Input() transfers: any;
 
   constructor() {}
 

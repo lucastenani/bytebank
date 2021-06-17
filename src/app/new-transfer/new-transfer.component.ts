@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-new-transference',
-  templateUrl: './new-transference.component.html',
-  styleUrls: ['./new-transference.component.scss'],
+  selector: 'app-new-transfer',
+  templateUrl: './new-transfer.component.html',
+  styleUrls: ['./new-transfer.component.scss'],
 })
-export class NewTransferenceComponent {
+export class NewTransferComponent {
   @Output() toTransfer = new EventEmitter<any>();
 
   value!: number;
