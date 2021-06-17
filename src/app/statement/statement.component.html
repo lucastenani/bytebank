@@ -1,15 +1,15 @@
-<table>
-  <thead>
-    <th>Data</th>
-    <th>Valor</th>
-    <th>Destino</th>
+<table class="table">
+  <thead class="table__header">
+    <th class="table__header__content">Data</th>
+    <th class="table__header__content">Valor</th>
+    <th class="table__header__content">Destino</th>
   </thead>
 
   <tbody>
-    <tr *ngFor="let transfer of transfers">
-      <td>{{transfer.date | date: 'short'}}</td>
-      <td>{{transfer.value | currency}}</td>
-      <td>{{transfer.destiny}}</td>
+    <tr class="table__line" *ngFor="let transfer of transfers">
+      <td class="table__content">{{transfer.date | date: 'short'}}</td>
+      <td class="table__content">{{transfer.value | currency}}</td>
+      <td class="table__content">{{transfer.destiny}}</td>
     </tr>
   </tbody>
 </table>
