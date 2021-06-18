@@ -5,7 +5,7 @@
     <th class="table__header__content">Destino</th>
   </thead>
 
-  <tbody>
+  <tbody *ngIf="transfers?.length > 0; else emptyList">
     <tr class="table__line" *ngFor="let transfer of transfers">
       <td class="table__content">{{transfer.date | date: 'short'}}</td>
       <td class="table__content">{{transfer.value | currency}}</td>
@@ -13,3 +13,6 @@
     </tr>
   </tbody>
 </table>
+<ng-template #emptyList>
+  <p>Nenhuma transferência cadastrada</p>
+</ng-template>
