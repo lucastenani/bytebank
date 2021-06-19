@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Transfer } from '../models/transfers.model';
+import { TransferService } from '../services/transfer.service';
 
 @Component({
   selector: 'app-new-transfer',
@@ -11,13 +13,19 @@ export class NewTransferComponent {
   value!: number;
   destiny!: number;
 
+  constructor(private service: TransferService) {}
+
   transfer() {
     console.log('Solicitada nova transferência');
 
-    const valueIssue = { value: this.value, destiny: this.destiny };
-    this.toTransfer.emit(valueIssue);
-
-    this.clearFields();
+    const valueIssue: Transfer = { value: this.value, destiny: this.destiny };
+    this.service.toAdd(valueIssue).subscribe(
+      (result) => {
+        console.log(result);
+        this.clearFields();
+      },
+      (error) => console.error(error)
+    );
   }
 
   clearFields() {
