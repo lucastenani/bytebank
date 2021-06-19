@@ -12,6 +12,6 @@ export class StatementComponent implements OnInit {
   constructor(private service: TransferService) {}
 
   ngOnInit(): void {
-    this.transfers = this.service.transfer;
+    this.service.all().subscribe((x) => (this.transfers = x));
   }
 }

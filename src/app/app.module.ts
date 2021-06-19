@@ -7,12 +7,13 @@ import { AppComponent } from './app.component';
 import { NewTransferComponent } from './new-transfer/new-transfer.component';
 import { StatementComponent } from './statement/statement.component';
 import localePt from '@angular/common/locales/pt';
+import { HttpClientModule } from '@angular/common/http';
 
 registerLocaleData(localePt, 'pt');
 
 @NgModule({
   declarations: [AppComponent, NewTransferComponent, StatementComponent],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
     {
